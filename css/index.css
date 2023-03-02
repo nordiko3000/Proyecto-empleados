@@ -11,16 +11,12 @@ body {
 }
 
 footer {
-    background-color: #ffa333;
+    background-color: #231f3a;
 }
 
 
 #bottom {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    color: #fff;
+    
 }
 
 
@@ -29,13 +25,21 @@ footer {
 #bottom li a {
     text-decoration: none;
     display: block;
-    color: white;
     padding: 20px;
     font-size: 25px;
-    color: black;
+    color: white;
+    float: right;
+    width: 50%;
 
 
 
+}
+
+#bottom img{
+    border-radius: 100%;
+    width: 75px ;
+    height: 75px;
+    float: left;
 }
 
 #bottom li {
@@ -81,12 +85,11 @@ p {
     color: white;
     font: smaller;
     padding: 30px;
-    display: flex;
-    flex-direction: row;
     text-align: center;
 
 
 }
+
 
 /*esto es para el icono*/
 
@@ -114,6 +117,8 @@ p {
     text-align: justify;
     line-height: 30px;
     letter-spacing: 1.2px;
+    margin: 30px;
+    margin-top: 25px;
 }
 
 /*esto es de las cards */
@@ -121,7 +126,14 @@ p {
 #cards{
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-wrap: wrap;
     
     
     
@@ -131,24 +143,51 @@ p {
 }
  .btn{
     position: inherit;
-    display: inline-flex;
-    width: 200px;
-    height: 200px;
+    display:flex;
+    flex-direction: initial;
+    width: 400px;
+    height: 350px;
     background-color: white;
-    padding: 20px;
-    size-adjust:inherit;
+    padding: 10px;          
     margin:30px;
+    border-radius: 6%;
+    flex-direction: column;
+    align-items: center;
+    
+    
+ }
+ .btn img{
+    width: 100px;
+    height: 100px;
+    
+
+}
+
+
+ .btn:hover{
+    transform: translateX(3%);
+    box-shadow: 5px 5px 20px 20px rgb(0, 0, 0, .6);
+
+ }
+
+ .btn h1 {
+    
+    
+    font-size: 20px;
+    color: black;
+
     
  }
 
- .btn h1{
-    position: inherit;
-    padding: 10px;
-    overflow-y: hidden;
+
+ .btn p{
+    position: relative;
+    size-adjust: 10px;
+    color: black;
+    justify-content: center;
+    font:smaller;
 
  }
-
-
 
 
 
