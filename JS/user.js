@@ -40,6 +40,6 @@ window.addEventListener("resize", function(){
 
 });
 
-alert("chales :c");
+
 })
 
