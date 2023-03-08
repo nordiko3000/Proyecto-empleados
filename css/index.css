@@ -10,13 +10,18 @@ body {
 
 }
 
-footer {
-    background-color: #231f3a;
-}
 
 
 #bottom {
     background-color: white;
+    color: black;
+    text-align: center;
+    padding: 40px;
+    
+    display: block;
+    
+    align-items: center;
+
 }
 
 
@@ -39,8 +44,7 @@ footer {
     border-radius: 100%;
     width: 75px ;
     height: 75px;
-    float: left;
-}
+    float:right;}
 
 #bottom li {
     display: inline-block;
@@ -125,9 +129,9 @@ p {
 
 #cards{
     justify-content: center;
-    position: relative;
+    position: block;
     height: 100vh;
-    display: flex;
+    display: block;
     justify-content: space-between;
     height: 100vh;
     width: fit-content;
@@ -142,7 +146,7 @@ p {
 
 }
  .btn{
-    position: inherit;
+    position: block;
     display:flex;
     flex-direction: initial;
     width: 400px;
@@ -189,6 +193,46 @@ p {
     text-align: justify;
 
  }
+
+
+ /*Esto es del footer lo hixo aaron*/
+
+ footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 40px;
+    padding: 50px;
+    display: block;
+    margin-top: 150PX;
+    align-items: center;
+    
+  }
+footer img{
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin-right: 50px;
+    margin: 10px;
+    
+
+    
+
+}
+.fabril{
+    display: block;
+    float: left;
+    width: 200px;
+    height: 200px;
+   
+    border-radius: 100%;
+}
+
+footer p{
+    color: black;
+}
+
+
 
 
 

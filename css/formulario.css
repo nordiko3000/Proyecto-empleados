@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #231f3a;;
+  align-items: center;
+}
+
+form {
+  background-image: url("../imagenes/a553f6a36ba2fbd9ed78456d7cb9c38c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  border-radius: 6%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+}
+
+input {
+  width: 400px;
+  border: 0;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 17px;
+    background-color: transparent;
+    color: white;
+    font-weight: 200;
+    border: 1px solid white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+button {
+  height: 50px;
+    width: 400px;
+    border-radius: 0;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+button:hover {
+  border-color: #00ffff;
+  transition: 0.5s;
+}

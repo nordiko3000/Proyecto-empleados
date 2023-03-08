@@ -11,6 +11,7 @@ body {
     height: 100vh;
     font-weight: 200;
   }
+  /*Esto es del register y todos sus contenidos */
   
   #contactform {
     display: flex;
@@ -21,7 +22,12 @@ body {
     z-index: 500;
     width: 400px;
     height: 100vh;
+    
   }
+
+  
+
+  /*Estilos para el boton del register*/
   
   #contactform input {
     border: 0;
@@ -37,6 +43,8 @@ body {
     
   }
   
+/*Con esto le damos un color blanco y una opavidad a las letras dentro de los placeholder*/
+
   #contactform input::placeholder {
     color: white;
     opacity: 0.8;
@@ -44,7 +52,7 @@ body {
   
   
   
-
+/*Estilos para el boton del register*/
   
   #btn {
     height: 50px;
@@ -74,4 +82,5 @@ body {
     font-size: 25px;
     text-align: center;
   }
+
   
