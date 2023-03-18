@@ -9,26 +9,26 @@
     <link rel="stylesheet" href="../css/formularios.css">
 </head>
 
-<form>
+<form action="../php/formularios.php">
 
     <label for="hire-date">Fecha de contratación:</label>
-    <input type="date" id="hire-date" name="hire-date" required>
+    <input type="date" id="hire-date" name="fecha_contrato" required>
     
-    <input type="text" id="company-name" name="xd" required placeholder="Ocupacion">
+    <input type="text" id="company-name" name="ocupacion" required placeholder="Ocupacion">
   
     
-    <input type="text" id="occupation" name="occupation" required placeholder="Nombre de la empresa">
+    <input type="text" id="occupation" name="empresa" required placeholder="Nombre de la empresa">
   
-    
-  
-    
     
   
     
-    <input type="tel" id="phone-number" name="phone-number" required placeholder="Numero telefonico">
+    
   
     
-    <input type="text" id="address" name="address" required placeholder="Direccion">
+    <input type="tel" id="phone-number" name="telefono" required placeholder="Numero telefonico">
+  
+    
+    <input type="text" id="address" name="direccion" required placeholder="Direccion">
   
     <button type="submit">Enviar</button>
   </form>

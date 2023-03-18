@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="../css/formularios.css">
     <title>Document</title>
 </head>
-<form action="">
+<form action="../php/formularios.php">
     <label for="hire-date">Fecha de fundacion:</label>
-    <input type="date" id="hire-date" name="hire-date" required>
+    <input type="date" id="hire-date" name="fecha_fundacion" required>
     
-    <input type="text" id="company-name" name="xd" required placeholder="Nombre empresa">
+    <input type="text" id="company-name" name="nombre_empresa" required placeholder="Nombre empresa">
   
     
-    <input type="text" id="occupation" name="occupation" required placeholder="servicios">
+    <input type="text" id="occupation" name="servicio" required placeholder="servicios">
   
-    <input type="text" id="address" name="address" required placeholder="Instagram">
+    <input type="text" id="address" name="instagram" required placeholder="Instagram">
 
-    <input type="text" id="address" name="address" required placeholder="Facebook">
+    <input type="text" id="address" name="facebook" required placeholder="Facebook">
     
-    <input type="text" id="address" name="address" required placeholder="Direccion">
-    <input type="tel" id="phone-number" name="phone-number" required placeholder="Numero telefonico">
-    <input type="text" id="address" name="address" required placeholder="Sector">
+    <input type="text" id="address" name="direccion" required placeholder="Direccion">
+    <input type="tel" id="phone-number" name="telefono" required placeholder="Numero telefonico">
+    <input type="text" id="address" name="sector" required placeholder="Sector">
   
   
     <button type="submit">Enviar</button>
