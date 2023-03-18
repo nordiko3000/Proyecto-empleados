@@ -59,11 +59,14 @@ button {
     
 }
 
-button:hover {
-  background-color: #0069d9;
-}
+
 
 button:hover {
   border-color: #00ffff;
-  transition: 0.5s;
+    transition: 0.5s;
+}
+
+.check {
+  display: inline-block;
+  
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="../css/formularios.css">
 </head>
 
 <form>
@@ -22,7 +22,7 @@
     
   
     
-    <input type="email" id="email" name="email" required placeholder="Correo electronico">
+    
   
     
     <input type="tel" id="phone-number" name="phone-number" required placeholder="Numero telefonico">
