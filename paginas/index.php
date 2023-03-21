@@ -21,8 +21,8 @@
          <div class="items">
 
             <li><img src="../imagenes/fabrilink.png" alt=""></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Registrate</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="registrate.php">Registrate</a></li>
             <li><a href="Politicas.html">Politicas</a></li>
             <li><a href="Blog.html">Blog</a></li>
 

@@ -1,6 +1,8 @@
 <?php
 include 'conexion.php';
 
+date_default_timezone_set('America/Mexico_City');
+
 
 
 
@@ -19,7 +21,9 @@ if (isset($_SESSION['id'])) {
         $telefono = $_POST['telefono'];
         $sector = $_POST['sector'];
 
-        $id_usuario = $_SESSION['id'];
+        $fecha = date("Y-m-d");
+
+        
 
         $insert1 = "INSERT INTO admin_datos(fecha_fundacion,nombre_empresa,servicio,instagram,facebook,direccion,telefono,sector)
                        VALUES('$fecha','$empresa','$servicio','$instagram','$facebook','$direccion','$telefono','$sector')";

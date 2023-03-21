@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/formularios.css">
 </head>
 
-<form action="../php/formularios.php">
+<form method="POST" action="../php/formularios.php">
 
     <label for="hire-date">Fecha de contratación:</label>
     <input type="date" id="hire-date" name="fecha_contrato" required>
