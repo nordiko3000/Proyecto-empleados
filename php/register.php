@@ -23,6 +23,8 @@ if (isset($_POST['admin'])) {
      $verificar_nombre = mysqli_query($conexion, "SELECT * FROM empresa WHERE nombre = '$nombre'");
      $verificar_usuario = mysqli_query($conexion, "SELECT * FROM empresa WHERE usuario = '$nombre_usuario'");
      $verificar_correo = mysqli_query($conexion, "SELECT * FROM empresa WHERE correo= '$correo'");
+
+     
      if (
           (mysqli_num_rows($verificar_nombre) > 0 ||
                mysqli_num_rows($verificar_usuario) > 0 ||
@@ -50,7 +52,7 @@ if (isset($_POST['admin'])) {
           echo '
    <script>
         alert("usuario registrado exitosamente")
-        window.location ="../paginas/formulario_admin.php"
+        window.location ="../paginas/admin/formulario_admin.php"
    </script>     
         ';
      } else {
@@ -84,7 +86,7 @@ if (isset($_POST['admin'])) {
           echo '
                <script>
                alert ("nombre, correo o usuario ya agregado xd");
-               window.location="../paginas/login.php"
+               window.location="../paginas/registrate.php"
                </script>
                         ';
 
@@ -99,7 +101,7 @@ if (isset($_POST['admin'])) {
           echo '
         <script>
              alert("usuario registrado exitosamente")
-             window.location ="../paginas/formulario_user.php"
+             window.location ="../paginas/user/formulario_user.php"
         </script>     
              ';
      } else {

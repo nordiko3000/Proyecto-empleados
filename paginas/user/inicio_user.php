@@ -15,7 +15,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/user-empleado.css">
     <script src="https://kit.fontawesome.com/bbd4ac78c5.js" crossorigin="anonymous"></script>
-    <script src="../JS/user.js"></script>
+    <script src="../../JS/user.js"></script>
 </head>
 <body id="body">
     
@@ -79,7 +79,7 @@
       </div>
 
   </div>
-      
+</header>
      
       
       

@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../../css/formularios.css">
 </head>
 
-<form method="POST" action="../php/formularios.php">
+<form method="POST" action="../../php/formularios.php">
 
     <label for="hire-date">Fecha de contratación:</label>
     <input type="date" id="hire-date" name="fecha_contrato" required>
