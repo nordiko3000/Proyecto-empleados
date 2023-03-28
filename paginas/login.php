@@ -13,10 +13,10 @@
 		
 		<input type="text" id="usuario" required name="usuario"  placeholder="Introduzca su usuario">
 		
-		<input type="password" id="contraseña" name="contraseña" required placeholder="Introduzca su contraseña" >
+		<input type="password" id="contraseña" name="contrasena" required placeholder="Introduzca su contraseña" >
 
         <label>Entrar como administrador</label>
-        <input type="checkbox" name="admin" value="1">
+        <input type="checkbox" name="admin1" value="1">
 		<input type="submit" value="Iniciar sesión">
 
 

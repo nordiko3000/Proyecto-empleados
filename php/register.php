@@ -35,7 +35,7 @@ if (isset($_POST['admin'])) {
           echo '
           <script>
           alert ("nombre, correo o usuario ya agregado xd");
-          window.location="../paginas/login.php"
+          window.location="../paginas/registrate.php"
           </script>
                    ';
 
@@ -95,9 +95,9 @@ if (isset($_POST['admin'])) {
      $query = "INSERT INTO empleados(nombre_completo,nombre_usuario,correo,contrasena)
      VALUES('$nombre','$nombre_usuario','$correo','$contrasena')";
 
-     $ejecutar = mysqli_query($conexion, $query);
+     $ejecutar2 = mysqli_query($conexion, $query);
 
-     if ($ejecutar) {
+     if ($ejecutar2) {
           echo '
         <script>
              alert("usuario registrado exitosamente")

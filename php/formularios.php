@@ -1,96 +1,88 @@
 <?php
-include 'conexion.php';
-include 'registrate.php';
-
-date_default_timezone_set('America/Mexico_City');
+include ("conexion.php");
+include("register.php");
 
 
-//aqui hago unas variables que me dicen que valor de la tabla es para enviar los datos a su respectiva tabla
 
-$SESSION = "SELECT * FROM empresa WHERE id =1";
-$SESSION_EMPLEADOS = "SELECT * FROM empleados WHERE id=1";
 
 session_start();
 
-//aqui hago el if que me mandara los datos de la empresa en caso de entrar como administrador
+if(isset($_POST['admin'])) {
 
-if (isset($_SESSION)) {
+    $tabla = $_POST['empresa'];
+    
+    if($tabla == 'admin_datos') {
 
-
-
-        $fecha = $_POST['fecha_fundacion'];
-        $empresa = $_POST['nombre_empresa'];
-        $servicio = $_POST['servicio'];
-        $instagram = $_POST['instagram'];
-        $facebook = $_POST['facebook'];
-        $direccion = $_POST['direccion'];
-        $telefono = $_POST['telefono'];
-        $sector = $_POST['sector'];
+        $fecha = $_GET['fecha_fundacion'];
+        $empresa = $_GET['nombre_empresa'];
+        $servicio = $_GET['servicio'];
+        $instagram = $_GET['instagram'];
+        $facebook = $_GET['facebook'];
+        $direccion = $_GET['direccion'];
+        $telefono =$_GET['telefono'];
+        $sector = $_GET['sector'];
 
         $fecha = date("Y-m-d");
 
-        
+        $insert = "INSERT INTO admin_datos(fecha_fundacion,nombre_empresa,servicio,instagram,facebook,direccion,telefono,sector)
+                   VALUES('$fecha','$empresa','$servicio','$instagram','$facebook','$direccion','$telefono','$sector')";
 
-        $insert1 = "INSERT INTO admin_datos(fecha_fundacion,nombre_empresa,servicio,instagram,facebook,direccion,telefono,sector)
-                       VALUES('$fecha','$empresa','$servicio','$instagram','$facebook','$direccion','$telefono','$sector')";
+        $query = mysqli_query($conexion, $insert);
 
-        $result1 = mysqli_query($conexion, $insert1);
-
-        if ($result1) {
+        if ($query) {
             echo '
           <script>
                alert("usuario registrado exitosamente")
-               window.location ="../paginas/admin/inicio_admin.php"
+               window.location ="../paginas/admin/admin.php"
           </script>     
                ';
-       } else {
+        } else {
             echo '
           <script>
                alert("error usuario no registrado")
                window.location ="../paginas/registrate.php"
           </script>     
                ';
-       }
+        }
 
-//aqui hago un elseif porque como es variable se me hizo mas facil 
+    } elseif($tabla == 'empleados') {
 
-    } elseif (isset($SESSION_EMPLEADOS)) 
-
-        $fecha_contrato = $_POST['fecha_contrato'];
-        $ocupacion = $_POST['ocupacion'];
-        $empresa_user = $_POST['empresa'];
-        $telefono_user = $_POST['telefono'];
-        $direccion_user = $_POST['direccion'];
-
-        //aqui hago una variable para que me diga el formato de fecha 
+        $fecha_contrato = $_GET['fecha_contrato'];
+        $ocupacion = $_GET['ocupacion'];
+        $empresa_user = $_GET['empresa'];
+        $telefono_user = $_GET['telefono'];
+        $direccion_user = $_GET['direccion'];
 
         $fecha_contrato = date("Y-m-d");
 
-        $insert2 = "INSERT INTO user_datos(fecha_contrato,ocupacion,empresa,telefono,direccion)
-                        VALUES ('$fecha_contrato','$ocupacion','$empresa_user','$telefono_user','$direccion_user')";
+        $query = "INSERT INTO user_datos(fecha_contrato,ocupacion,empresa,telefono,direccion)
+                    VALUES ('$fecha_contrato','$ocupacion','$empresa_user','$telefono_user','$direccion_user')";
+        
 
-        $result2 = mysqli_query($conexion, $insert2);
+        $query = mysqli_query($conexion, $insert);
 
-        if ($result2) {
+        if ($result) {
             echo '
           <script>
                alert("usuario registrado exitosamente")
-               window.location = "../paginas/user/inicio_user.php"
+               window.location = "../paginas/user/user.php"
           </script>     
                ';
-       } else {
+        } else {
             echo '
           <script>
                alert("error usuario no registrado")
                window.location ="../paginas/registrate.php"
           </script>     
                ';
-       }
+        }
+
+    }
+
+}
 
 
-    
-
-
+mysqli_close($conexion);
 
 
 
