@@ -6,31 +6,20 @@ include("../../php/conexion.php");
 
 
 
-$sql = "SELECT * FROM user_datos";
-
-$query = mysqli_query($conexion, $sql);
-
-$row = mysqli_fetch_array($query);
-
-
-
-
-
-
-if (isset($_SESSION['usuario'])) {
-
-  echo '
-     <script>
-             alert("Por favor inicia sesion");
-     <script>
-';
-
-  header("location: ../index.php");
-
-  session_destroy();
-
-  die();
+if ($conexion->connect_error) {
+  die("Connection failed: " . $conexion->connect_error);
 }
+
+// Realizar consulta a la base de datos
+$sql = "SELECT  nombre, fecha, ocupacion, empresa, telefono, direccion FROM cliente_datos";
+$resultado = $conexion->query($sql);
+
+
+$query=mysqli_query($conexion,$sql);
+$row=mysqli_fetch_array($query);
+
+
+
 
 
 
@@ -71,7 +60,7 @@ if (isset($_SESSION['usuario'])) {
     <div class="menu__side" id="menu_side">
 
       <div class="name__page">
-        <img src="../imagenes/fabrilink.png" class=""></i>
+        <img src="../../imagenes/fabrilink.png" class=""></i>
         <h4>FabriLink</h4>
       </div>
 
@@ -145,11 +134,11 @@ if (isset($_SESSION['usuario'])) {
       <thead class="table-date">
         <tr>
           <th>Nombre completo</th>
-          <th>Empresa</th>
+          <th>Fecha contratacion</th>
           <th>Ocupacion</th>
-          <th>Fecha de contratacion</th>
-          <th>Pagos</th>
-          <th>Comentarios</th>
+          <th>Empresa que peternece</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
 
 
 
@@ -158,35 +147,31 @@ if (isset($_SESSION['usuario'])) {
 
       </thead>
       <tbody>
+        
         <?php
-        while ($row = mysqli_fetch_array($query)) {
-          ?>
-          <tr>
-            <th>
-              <?php echo $row['nombre_completo'] ?>
-            </th>
-            <th>
-              <?php echo $row['empresa'] ?>
-            </th>
-            <th>
-              <?php echo $row['ocupacion'] ?>
-            </th>
-            <th>
-              <?php echo $row['fecha_contrato'] ?>
-            </th>
-            <th>
-              <?php echo $row['pagos'] ?>
-            </th>
-            <th>
-              <?php echo $row['comentarios'] ?>
-            </th>
-            <th><a href="actualizar.php?id=<?php echo $row['nombre_completo'] ?>" class="btn btn-info">Editar</a></th>
-            <th><a href="delete.php?id=<?php echo $row['nombre_completo'] ?>" class="btn btn-danger">Eliminar</a></th>
+        if ($resultado->num_rows > 0) {
+          // Mostrar datos en la tabla
+          while($fila = $resultado->fetch_assoc()) {
+            echo "<tr>";
             
-          </tr>
-        <?php
+            echo "<td>".$fila["nombre"]."</td>";
+            echo "<td>".$fila["fecha"]."</td>";
+            echo "<td>".$fila["ocupacion"]."</td>";
+            echo "<td>".$fila["empresa"]."</td>";
+            echo "<td>".$fila["telefono"]."</td>";
+            echo "<td>".$fila["direccion"]."</td>";
+            echo "<td><a href='editar.php?id=" . $row['id'] . "'>Editar</a></td>";
+            echo "<td><a href='eliminar.php?id=" . $row['id'] . "'>Eliminar</a></td>";
+            echo "</tr>";
+
+          }
+        } else {
+          echo "0 results";
         }
         ?>
+        
+        
+        
       </tbody>
 
 

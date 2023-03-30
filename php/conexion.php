@@ -1,7 +1,7 @@
 <?php
 
 
-$conexion = mysqli_connect("localhost","root","","pagina-empleados-bd");
+$conexion = mysqli_connect("localhost","root","","proyecto");
 
 if ($conexion){
     echo 'conectado exitosamente';

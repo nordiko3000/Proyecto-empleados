@@ -17,7 +17,6 @@
 
 
 
-        <input type="text" required placeholder="Nombre de empresa o empleado" name="nombre_completo">
 
         <input type="text" id="text" required placeholder="nombre de usuario" name="usuario">
 
@@ -27,7 +26,7 @@
         <input type="password" name="contrasena" required placeholder="contrasena">
         <div class="check">
             <label>Registrarse como administrador</label>
-            <input type="checkbox" name="admin" value="1">
+            <input type="checkbox" name="check" value="1">
 
         </div>
 

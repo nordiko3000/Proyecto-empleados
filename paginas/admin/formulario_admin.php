@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/formularios.css">
     <title>Document</title>
 </head>
-<form method="POST" action="../../php/formularios.php" >
+<form method="POST" action="../../php/formulario_admin.php" >
     <label for="hire-date">Fecha de fundacion:</label>
     <input type="date" id="hire-date" name="fecha_fundacion" required>
     
@@ -15,8 +15,7 @@
   
     
     <input type="text" id="occupation" name="servicio" required placeholder="servicios">
-  
-    <input type="text" id="address" name="instagram" required placeholder="Instagram">
+
 
     <input type="text" id="address" name="facebook" required placeholder="Facebook">
     
