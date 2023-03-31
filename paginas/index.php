@@ -23,9 +23,8 @@
             <li><img src="../imagenes/fabrilink.png" alt=""></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="registrate.php">Registrate</a></li>
-            <li><a href="Politicas.html">Politicas</a></li>
-            <li><a href="Blog.html">Blog</a></li>
-
+            <li><a href="politicas.php">Politicas</a></li>
+         
         </div>
             
 
@@ -73,10 +72,7 @@
                 <h1>ACCESIBILIDAD</h1>
                 <img src="../imagenes/accesibilidad.png" alt="">
                 <p> Al tener toda la información en línea, tus empleados pueden acceder a ella desde cualquier lugar y
-                    en cualquier momento,
-                    siempre que tengan acceso a internet. Esto significa que podrán consultar sus horarios de trabajo,
-                    días de vacaciones, y cualquier otra información
-                    relevante sin tener que acudir a la oficina.
+                    en cualquier momento
                 </p>
             </div>
 
@@ -85,25 +81,19 @@
                 <h1>CENTRALIZACION</h1>
                 <img src="../imagenes/centralizacion.png" alt="">
                 <p>Una página web de gestión de empleados te permite almacenar toda la información relevante de tus
-                    empleados en un solo lugar. Desde datos personales, información de contacto,
-                    horarios de trabajo, días de vacaciones, hasta evaluaciones de desempeño y cualquier otra
-                    información que necesites.
+                    empleados .
                 </p>
             </div>
             <div class="btn">
                 <h1>AHORRO DE TIEMPO</h1>
                 <img src="../imagenes/tiempo.png" alt="">
-                <p>La gestión de empleados puede ser una tarea tediosa y consumir mucho tiempo. Con una página web de
-                    gestión de empleados, puedes automatizar muchos procesos como la gestión de horarios,
-                    días de vacaciones y evaluaciones de desempeño, lo que te permitirá ahorrar tiempo y recursos
-                    valiosos.</p>
+                <p>La gestión de empleados puede ser una tarea tediosa y puede consumir mucho tiempo. 
             </div>
             <div class="btn">
                 <h1>COMUNICACION</h1>
                 <img src="../imagenes/comunicacion.png" alt="">
                 <p>Con una página web de gestión de empleados, puedes mejorar la comunicación entre empleados y
-                    empleadores. Por ejemplo, puedes enviar mensajes a grupos de empleados para informarles sobre nuevas
-                    políticas de la empresa, cambios en los horarios de trabajo, o cualquier otra información relevante.
+                    empleadores. 
                 </p>
 
 
@@ -111,17 +101,14 @@
             <div class="btn">
                 <h1>FACILIDAD DE USO</h1>
                 <img src="../imagenes/uso.png" alt="">
-                <p> una buena página web de gestión de empleados está diseñada para ser fácil de usar e intuitiva, lo
-                    que significa que cualquier persona puede aprender a usarla en poco tiempo. Esto minimiza la
-                    necesidad de capacitación y aumenta la adopción de la herramienta por parte de los empleados.
+                <p> Una buena página web de gestión de empleados está diseñada para ser fácil de usar e intuitiva.
                 </p>
             </div>
             <div class="btn">
                 <h1>PROTECCION</h1>
                 <img src="../imagenes/proteccion.png" alt="">
-                <p>Al almacenar información de los empleados en línea, es importante asegurarse de que esta información
-                    esté protegida. Una página web de gestión de empleados puede ofrecer medidas de seguridad
-                    adicionales,como el cifrado de datos y la autenticación de dos factores.</p>
+                <p> Una página web de gestión de empleados puede ofrecer medidas de seguridad
+                    adicionales,</p>
             </div>
 
 

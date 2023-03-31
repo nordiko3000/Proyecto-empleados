@@ -6,9 +6,6 @@ include("../../php/conexion.php");
 
 
 
-if ($conexion->connect_error) {
-  die("Connection failed: " . $conexion->connect_error);
-}
 
 // Realizar consulta a la base de datos
 $sql = "SELECT  nombre, fecha, ocupacion, empresa, telefono, direccion FROM cliente_datos";
@@ -80,7 +77,7 @@ $row=mysqli_fetch_array($query);
           </div>
         </a>
 
-        <a href="#">
+        <a href="asignar_pago.php">
           <div class="option">
             <i class="fa-sharp fa-solid fa-hand-holding-dollar" title="Pagos"></i>
             <h4>Pagos</h4>

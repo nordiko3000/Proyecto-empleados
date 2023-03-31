@@ -13,11 +13,11 @@
                 <div class="container mt-5">
                     <form action="update.php" method="POST">
                     
-                                <input type="hidden" name="empleados" value="<?php echo $row['cod_estudiante']  ?>">
+                                <input type="hidden" name="empleados" value="<?php echo $row['id']  ?>">
                                 
-                                <input type="text" class="form-control mb-3" name="nombre" placeholder="Dni" value="<?php echo $row['nombre']  ?>">
-                                <input type="text" class="form-control mb-3" name="ocupacion" placeholder="Nombres" value="<?php echo $row['nombres']  ?>">
-                                <input type="text" class="form-control mb-3" name="" placeholder="Apellidos" value="<?php echo $row['apellidos']  ?>">
+                                <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre" value="<?php echo $row['nombre']  ?>">
+                                <input type="text" class="form-control mb-3" name="ocupacion" placeholder="Nombres" value="<?php echo $row['Ocupacion']  ?>">
+                                <input type="text" class="form-control mb-3" name="" placeholder="Apellidos" value="<?php echo $row['']  ?>">
                                 
                             <input type="submit" class="btn" value="Actualizar">
                     </form>
