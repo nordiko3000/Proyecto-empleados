@@ -1,44 +1,25 @@
-<?
-
-require("conexion.php");
+<?php
+include("conexion.php");
 session_start();
-if ($conexion) {
 
+if (!$conexion) {
     echo '
     <script>
-      alert("sifunciona wey xd");
+      alert("Error de conexión a la base de datos");
+      window.location = "../paginas/login.php";
     </script>
     ';
-    # code...
-}else{
-    echo '
-    <script>
-      alert("no funciona wey :c");
-    </script>
-    ';
-
+    exit(); // salir del script
 }
 
-
 if (isset($_POST["admin"])) {
-
     $usuario = $_POST["usuario_login"];
     $contrasena = $_POST["contrasena_login"];
 
-
-
-    $validar_login = mysqli_query($conexion, "SELECT * FROM empresa WHERE usuario = '$usuario' and contrasena = '$contrasena' ");
-
+    echo$validar_login = mysqli_query($conexion, "SELECT * FROM administrador WHERE usuario = '$usuario' and contrasena = '$contrasena'");
     if (mysqli_num_rows($validar_login) > 0) {
-
-        echo '
-        <script>
-               alert("bienvenido");
-               window.location="../paginas/admin/admin.php";
-        </script>
-        
-        ';
-        # code...
+        header("Location: ../paginas/admin/admin.php");
+        exit();
     } else {
         echo '
         <script>
@@ -47,37 +28,26 @@ if (isset($_POST["admin"])) {
         </script>
         ';
     }
-
-    # 
 } else {
+    $usuario_login = $_POST["usuario_login"];
+    $contrasena_login = $_POST["contrasena_login"];
 
-    $usuario_em = $_POST["usuario_login"];
-    $contrasena_em = $_POST["contrasena_login"];
-
-    $validar_login_empleados = mysqli_query($conexion, "SELECT * FROM empleados WHERE nombre_usuario = '$usuario_em' and contrasena = '$contrasena_em'");
+    $validar_login_empleados = mysqli_query($conexion, "SELECT * FROM cliente WHERE usuario = '$usuario_login' and contrasena = '$contrasena_login'");
 
     if (mysqli_num_rows($validar_login_empleados) > 0) {
         echo '
         <script>
-               alert("bienvenido");
-               windoe.location ="../paginas/user/user.php";
+               alert("Bienvenido");
+               window.location = "../paginas/user/user.php";
         </script>
         ';
     } else {
         echo '
         <script>
-               alert("Error usuario o contraseña incorecto");
+               alert("Error usuario o contraseña incorrecto");
                window.location = "../paginas/login.php";
         </script>
         ';
     }
-
-
-
-
-
 }
-
-
-
 ?>

@@ -8,17 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="../php/login_bd.php">
+    <form method="POST" action="../php/login_bd.php">
         
-        <input type="text" name="username" id="username" placeholder="user">
-        <br>
+        <input type="text"  id="username" name="usuario_login" placeholder="Ingrese su usuario" required>
         
-        <input type="password" name="password" id="password" placeholder="contraseña">
-        <br>
-        <input type="checkbox" name="remember" id="remember" value="1">
-        <label for="remember">Recordar usuario</label>
-        <br>
-        <input type="submit" value="Ingresar">
+        
+        <input type="password"  id="password" name="contrasena_login" placeholder="ingrese su contraseña" required>
+        
+        <input type="checkbox"  id="remember" name="admin" >
+        <label for="remember">Ingresar somo administrador</label>
+      
+        <input type="submit" >
     </form>
     
 </body>
